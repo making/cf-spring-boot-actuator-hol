@@ -6,6 +6,8 @@
 
 https://github.com/Pivotal-Japan/cf-workshop/blob/master/prerequisite.md
 
+必須ではありませんが、ローカル環境でMySQLが使えると良いです。
+
 ---
 
 ## Spring Boot Actuatorをローカルで試す
