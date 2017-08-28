@@ -67,10 +67,9 @@ java -jar target/hello-db-0.0.1-SNAPSHOT.jar --spring.profiles.active=cloud
 > java -jar target/hello-db-0.0.1-SNAPSHOT.jar --spring.profiles.active=h2,cloud
 > ```
 
-
 ---
 
-### Cloud Foundry上でのSpring Boot Actuator
+## Cloud Foundry上でのSpring Boot Actuator
 
 ビルドしたアプリケーションをCloud Foundryに`cf push`デプロイします。
 デプロイする前にMySQLのサービスインスタンスを`hello-db`という名前で作成します。
@@ -103,42 +102,42 @@ Pivotal Web Servicesの[Apps Manager](https://console.run.pivotal.io)にアク�
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/1852/1bf16ceb-2bf2-5bca-fcf0-7c8a3bd0d63b.png)
 
 
-#### Spring Boot Actuatorのレスポンス確認
+### Spring Boot Actuatorのレスポンス確認
 
 Spring Boot Actuatorの各種エンドポイントのレスポンスを確認できます。
 
-##### `/health`エンドポイント
+#### `/health`エンドポイント
 
 `Overview`タブです。
 
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/1852/2d26ad62-624e-ec92-fc1b-6a5073b2392e.png)
 
-##### `/info`エンドポイント
+#### `/info`エンドポイント
 
 `Settings`タブです。
 
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/1852/7c498614-c7ae-fdc4-584d-e90b6b294f84.png)
 
-##### `/loggers`エンドポイント
+#### `/loggers`エンドポイント
 
 `Logs`タブです。
 
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/1852/8add651f-dd91-e1ac-ec1b-5f2baab2e666.png)
 
 
-##### `/trace`エンドポイント
+#### `/trace`エンドポイント
 
 `Trace`タブです。
 
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/1852/03651681-652d-bed1-349b-7cc81c7bc498.png)
 
-##### `/dump`エンドポイント
+#### `/dump`エンドポイント
 
 `Threads`タブです。
 
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/1852/7c694738-cdec-8fbb-9b54-f7ad13495b1e.png)
 
-##### `/heapdump`エンドポイント
+#### `/heapdump`エンドポイント
 
 `Overview`タブです。
 
@@ -148,7 +147,7 @@ Spring Boot Actuatorの各種エンドポイントのレスポンスを確認で
 
 
 
-#### スケールアウト
+### スケールアウト
 
 次のコマンドで2インスタンスにスケールアウトしても2インスタンス分のレスポンスを確認できます。
 
@@ -158,10 +157,9 @@ cf scale message-api -i 2
 
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/1852/a0b73758-8920-0b1c-22de-241787bad4a0.png)
 
-
 ---
 
-### Metrics Forwarder Service
+## Metrics Forwarder Service
 
 Java Buildpackが自動で設定してくれる[Metrics Writer](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-metrics.html#production-ready-metric-writers)を試します。
 
