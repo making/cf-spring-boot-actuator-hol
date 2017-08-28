@@ -597,7 +597,7 @@ scrape_configs:
      
   #### ★★★★ ここから追加 (Service Keyの値を設定) ★★★★
   - job_name: 'metrics-forwarder'
-    scrape_interval: 30s
+    scrape_interval: 60s
     scrape_timeout: 10s
     metrics_path: /prometheus
     scheme: https
@@ -646,6 +646,19 @@ INFO[0000] Starting target manager...                    source="targetmanager.g
 > ```
 >
 > インスタンスを再起動、あるいはクラッシュした後自動復旧した場合はデータが全て消える点に注意していください。
+
+> Clear DBのsparkプラン（無償プラン)を使用している場合は、Metrics Forwarder Service側で
+> `com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: User 'bf53c7c4079117' has exceeded the 'max_questions' resource (current value: 3600)`
+> のエラーが出る場合があります。無償プランであるため、時間当たりのクエリ回数が制限されているためです。
+>
+> Java BuildpackのMetrics Writerはデフォルトで毎分1回メトリクスを送信します。この回数を減らすには`cloudfoundry.metrics`プロパティに送信間隔(ミリ秒)を指定してください。
+>
+> 5分間隔に変更する例:
+>
+> ```
+> cf set-env message-api cloudfoundry.metrics 300000
+> cf restart message-api
+> ```
 
 #### Grafanaの設定
 
