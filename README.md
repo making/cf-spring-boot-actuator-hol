@@ -591,7 +591,7 @@ cf d -f -r message-api
 cf ds -f hello-db
 cf ds -f demo-mf
 cf delete-service-key -f demo-mf prometheus
-cf delete-service-broker -f metrics-forwarder-tmaki
+cf delete-service-broker -f ●●●●●●●●●●●●●●●●
 cf ds -f metrics-db
 ```
 
