@@ -580,6 +580,18 @@ Optionsのprometheusはprometheusを選択してください。
 
 
 
+## 環境の削除
+
+使用した環境は次の順番で削除してください。
+
+```
+cf d -f -r message-api
+cf ds -f hello-db
+cf ds -f demo-mf
+cf delete-service-key -f demo-mf prometheus
+cf delete-service-broker -f metrics-forwarder-tmaki
+cf ds -f metrics-db
+```
 
 
 
