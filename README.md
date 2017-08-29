@@ -30,6 +30,12 @@ cd hello-db
 java -jar target/hello-db-0.0.1-SNAPSHOT.jar
 ```
 
+> MySQLユーザー名が`root`、パスワードが空の設定になっています。この設定以外でMySQLにアクセスしたい場合は、次のオプションを指定してください。
+>
+> ```
+> java -jar target/hello-db-0.0.1-SNAPSHOT.jar --spring.datasource.username=foo --spring.datasource.password=bar
+> ```
+
 > MySQLが使えない場合、インメモリなH2を使えます。
 >
 > ```
