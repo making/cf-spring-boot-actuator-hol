@@ -192,8 +192,8 @@ cd prometheus-exporter-metrics-forwarder-service
 {
   "services": [
     {
-      "id": "●●●●●●●●●●●●●●●●",
-      "name": "▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲",
+      "id": "▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲",
+      "name": "●●●●●●●●●●●●●●●●",
       "description": "Prometheus Exporter Metrics Forwarder Service",
       "bindable": true,
       "planUpdateable": false,
