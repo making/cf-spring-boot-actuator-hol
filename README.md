@@ -90,7 +90,7 @@ cf create-service cleardb spark hello-db
 cf push --random-route
 ```
 
-デプロイできたら、Spring Boot Actuatorのエンドポイントにアクセスしてみてください。403エラーになるでしょう。
+デプロイできたら、Spring Boot Actuatorのエンドポイントにアクセスしてみてください。401エラーになるでしょう。
 
 * https://message-api-(random-words).cfapps.io/env
 * https://message-api-(random-words).cfapps.io/health
