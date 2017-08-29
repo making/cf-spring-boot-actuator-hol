@@ -18,7 +18,7 @@ MySQLで`messages`データベースを作成してください。
 
 ```
 mysql -u ... 
-> CREATE DATABASE messages;
+> CREATE DATABASE demo;
 ```
 
 サンプルアプリをビルドして実行します。
