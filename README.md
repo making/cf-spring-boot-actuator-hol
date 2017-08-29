@@ -10,7 +10,7 @@ https://github.com/Pivotal-Japan/cf-workshop/blob/master/prerequisite.md
 
 ---
 
-## Spring Boot Actuatorをローカルで試す
+## [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html)をローカルで試す
 
 まずは[サンプルアプリ](https://github.com/making/hello-db)をローカルで動かします。
 
@@ -45,7 +45,7 @@ java -jar target/hello-db-0.0.1-SNAPSHOT.jar
 
 アプリケーションのエンドポイントは[http://localhost:8080/messages](http://localhost:8080/messages)です。
 
-次のSpring Boot Actuarorエンドポイントにアクセスしてください。
+次の[Spring Boot Actuarorエンドポイント](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html)にアクセスしてください。
 
 * http://localhost:8080/env
 * http://localhost:8080/health
